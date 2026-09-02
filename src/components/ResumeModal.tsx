@@ -8,6 +8,8 @@ import {
   Phone, 
   Mail, 
   Github, 
+  Globe,
+  ExternalLink,
   Award,
   GraduationCap,
   Briefcase,
@@ -34,61 +36,79 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
     const textContent = `
 MUHAMMAD AMAN SIDDIQUI
 Web Dev & Backend Dev · AI & Data Scientist
-Location: ${profileData.location} | Phone: ${profileData.phone} | Email: ${profileData.email} | GitHub: ${profileData.github}
+📍 Karachi, Pakistan | 📍 +92-319-4989590 | ✉ m.amansiddiqui.122@gmail.com | Portfolio: my-portfolio-livid-nu-93.vercel.app | GitHub: github.com/Aman-Siddiqui122
 
-PROFESSIONAL SUMMARY:
+PROFESSIONAL SUMMARY
 ${profileData.bio}
 
-TECHNICAL SKILLS:
-- Programming & Web: Python (Proficient), PHP, JavaScript, HTML, CSS, WordPress, Elementor, REST APIs
-- Frameworks & Backend: FastAPI, Django, Flask, MySQL, PostgreSQL
-- AI / ML & Data Science: LightGBM, Scikit-learn, TensorFlow, Pandas, NumPy, EDA, Matplotlib, Seaborn
-- Deployment & DevOps: AWS EC2, Hostinger, Oracle VPS, Docker, Docker Compose, Linux (Kali, Ubuntu), Git
+TECHNICAL SKILLS
+- Programming: Python (Proficient), PHP, HTML, CSS
+- Web Technologies: WordPress, Elementor, WordPress Customization, REST APIs
+- Frameworks: Pandas, NumPy, FastAPI, Scikit-learn (Machine Learning), TensorFlow (Deep Learning), Django, Flask
+- Databases: MySQL, PostgreSQL
+- Visualization: Matplotlib, Seaborn, Exploratory Data Analysis (EDA)
+- Deployment: AWS EC2, Hostinger, Oracle VPS, Docker, Docker Compose
+- Tools: Microsoft Excel (Advanced), Google Sheets, GitHub / Git
+- OS: Windows, Linux (Kali Linux, Ubuntu)
+- Soft Skills: Analytical Thinking, Problem Solving, Continuous Learning
 
-WORK EXPERIENCE:
+WORK EXPERIENCE
 Data Science Intern | Software Island (Remote) | Jan 28, 2026 – Apr 28, 2026
-- Analyzed real-world datasets end-to-end — from data cleaning and EDA to extracting actionable business insights
-- Built and validated predictive ML models using feature engineering, model training, and performance evaluation techniques
-- Created interactive dashboards and visualizations to present data findings clearly to stakeholders
+3-Month Remote Internship
+▸ Analyzed real-world datasets end-to-end — from data cleaning and EDA to extracting actionable business insights
+▸ Built and validated predictive ML models using feature engineering, model training, and performance evaluation techniques
+▸ Created interactive dashboards and visualizations to present data findings clearly to the team and stakeholders
 
-PROJECTS:
-1. CreditShield — Loan Credit Risk Prediction (2024–2025)
-   - Built end-to-end ML pipeline with LightGBM (AUC-ROC: 0.9756)
-   - Multi-step risk assessment UI with real-time scoring and debt ratio analysis
-   - Containerized with Docker and deployed on AWS EC2 & Render with Flask REST backend
-   - Live: https://loan-credit-risk-2.onrender.com/ | GitHub: https://github.com/Aman-Siddiqui122/Loan_Credit_Risk
+PROJECTS
+1. WhatsApp Channels Group Message Forwarder Automation | Personal Project | 2024-2025
+   ▸ Automated Real-Time Forwarding: Built a Node.js system using whatsapp-web.js to dynamically map source group IDs and forward incoming messages to target groups with a 1-second delay.
+   ▸ Persistent QR Authentication: Integrated initial QR-code authentication with local session caching to ensure automatic reconnects without repeating the login process.
+   ▸ Continuous Cloud Hosting: Configured and deployed the headless script on an Oracle Cloud Ubuntu VPS, utilizing process management for uninterrupted 24/7 execution.
 
-2. P&P Meat Wholesale — E-Commerce & Order Management System (2026)
-   - Built and deployed PHP-based meat e-commerce website on Hostinger
-   - Product browsing, details, and quantity-based ordering
-   - Admin portal for managing products and customer orders
-   - Live: https://pnpmeats.co.uk/ | Admin: https://portal.pnpmeats.co.uk/
+2. P&P Meat Wholesale — E-Commerce & Order Management System | Client Project | 2026
+   ▸ Built and deployed a PHP-based meat e-commerce website on Hostinger.
+   ▸ Developed product browsing, details, and quantity-based ordering.
+   ▸ Created an Admin Portal for managing products and customer orders.
+   ▸ Live Demo: https://pnpmeats.co.uk/ | Admin Portal: https://portal.pnpmeats.co.uk/
 
-3. MA Academy UK — Education & Tuition Website (2026)
-   - Built a full-stack PHP, HTML & CSS website for a UK tuition academy in Walsall
-   - Developed responsive pages showcasing tuition programs and vocational qualifications
-   - Deployed the website on Hostinger, helping the local academy establish an online presence
-   - Live: https://staging.maconsultancy.co.uk/
+3. CreditShield — Loan Credit Risk Prediction | Personal Project | 2025
+   ▸ Built an end-to-end ML pipeline using LightGBM to predict loan default risk, achieving an AUC-ROC of 0.9756
+   ▸ Developed a multi-step risk assessment UI with real-time probability scoring, credit grading, and debt ratio analysis
+   ▸ Containerized with Docker and deployed to production on AWS EC2 with a Flask REST backend
+   ▸ Live Demo: https://loan-credit-risk-2.onrender.com/ | GitHub: https://github.com/Aman-Siddiqui122/Loan_Credit_Risk
 
-4. Quality Cars & Parts / Vinyl ML Project (2026)
-   - End-to-end ML pipeline to predict chemical quality using UCI chemical Quality Dataset
-   - Modular architecture, YAML configuration, and Scikit-learn data pipelines
-   - Containerized with Docker and deployed on Amazon EC2
-   - GitHub: https://github.com/Aman-Siddiqui122/Vinfyl_ML-Project
+4. Meeting-Mate — Audio Transcription & Summarization Web App | Client Project | 2025
+   ▸ Built a full-stack app using Express.js backend and Vite frontend for audio/video transcription.
+   ▸ Added transcription, captions, summarization, and English translation for MP3, M4A, and other formats.
+   ▸ Deployed and managed the application on Vercel.
+   ▸ Live Demo: https://frontend-meeting-mate-bz64.vercel.app/
 
-EDUCATION:
+5. Quality Cars & Parts — Automotive Business Website | Client Project | 2026
+   ▸ Built a custom PHP, HTML, CSS & JavaScript website for a UK automotive client.
+   ▸ Developed responsive pages for vehicles, auto parts, repairs, and refurbishment services.
+   ▸ Deployed and managed the website on Hostinger.
+   ▸ Live Demo: https://qualitycarsandparts.com/
+
+6. MA Academy UK — Education & Tuition Website | Client Project | 2026
+   ▸ Built a full-stack PHP, HTML & CSS website for a UK tuition academy in Walsall
+   ▸ Developed responsive pages showcasing tuition programs and vocational qualifications
+   ▸ Deployed the website on Hostinger, helping the local academy establish an online presence
+   ▸ Live Demo: https://staging.maconsultancy.co.uk/
+
+EDUCATION
 - Higher Secondary Certificate (HSC) — Computer Science | Government Islamia Science College, Karachi (June 2026 – Aug 2027, Expected)
 - Secondary School Certificate (SSC) — Computer Science | Bodmas School System, Karachi (Graduated: Apr 2025)
 
-CERTIFICATIONS:
-- AI & Data Science Specialization — Saylani Mass IT Training (SMIT) (2026)
-- SMIT Hackathon Certification — Saylani Mass IT Training (SMIT) (2026)
-- Python Essentials — Cisco Networking Academy (2026)
-- Introduction to Data Science — Cisco Networking Academy (2026)
-- Data Analytics — HP Life (2026)
+CERTIFICATIONS
+▸ AI & Data Science Specialization — Saylani Mass IT Training (SMIT) | Issued 2026
+▸ SMIT Hackathon Certification — Saylani Mass IT Training (SMIT) | Issued 2026
+▸ Python Essentials — Cisco Networking Academy | Issued 2026
+▸ Introduction to Data Science — Cisco Networking Academy | Issued 2026
+▸ Data Analytics — HP Life | Issued 2026
 
-LANGUAGES:
-- Urdu (Native) | English (Conversational)
+LANGUAGES
+▸ Urdu — Native
+▸ English — Conversational
     `.trim();
 
     navigator.clipboard.writeText(textContent);
@@ -177,6 +197,11 @@ LANGUAGES:
               </span>
               <span>•</span>
               <span className="flex items-center gap-1">
+                <Globe className="w-3 h-3 text-[#0c1466]" />
+                my-portfolio-livid-nu-93.vercel.app
+              </span>
+              <span>•</span>
+              <span className="flex items-center gap-1">
                 <Github className="w-3 h-3 text-[#0c1466]" />
                 github.com/{profileData.githubUsername}
               </span>
@@ -201,25 +226,25 @@ LANGUAGES:
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#0c1466]/85">
               <div>
-                <strong className="text-[#0c1466]">Programming:</strong> Python (Proficient), PHP, JavaScript, HTML, CSS
+                <strong className="text-[#0c1466]">Programming:</strong> Python (Proficient), PHP, HTML, CSS
               </div>
               <div>
-                <strong className="text-[#0c1466]">Web & CMS:</strong> WordPress, Elementor, Customization, REST APIs
+                <strong className="text-[#0c1466]">Web Technologies:</strong> WordPress, Elementor, WordPress Customization, REST APIs
               </div>
               <div>
-                <strong className="text-[#0c1466]">Frameworks:</strong> FastAPI, Django, Flask, Scikit-learn, TensorFlow
+                <strong className="text-[#0c1466]">Frameworks:</strong> Pandas, NumPy, FastAPI, Scikit-learn (ML), TensorFlow (DL), Django, Flask
               </div>
               <div>
-                <strong className="text-[#0c1466]">Data Science & Viz:</strong> LightGBM, Pandas, NumPy, Matplotlib, Seaborn, EDA
+                <strong className="text-[#0c1466]">Databases & Viz:</strong> MySQL, PostgreSQL • Matplotlib, Seaborn, EDA
               </div>
               <div>
-                <strong className="text-[#0c1466]">Databases:</strong> MySQL, PostgreSQL
+                <strong className="text-[#0c1466]">Deployment:</strong> AWS EC2, Hostinger, Oracle VPS, Docker, Docker Compose
               </div>
               <div>
-                <strong className="text-[#0c1466]">DevOps & Cloud:</strong> AWS EC2, Hostinger, Oracle VPS, Docker, Docker Compose
+                <strong className="text-[#0c1466]">Tools:</strong> MS Excel (Advanced), Google Sheets, GitHub / Git
               </div>
               <div>
-                <strong className="text-[#0c1466]">Tools & OS:</strong> Git / GitHub, MS Excel (Adv), Linux (Kali, Ubuntu), Windows
+                <strong className="text-[#0c1466]">OS:</strong> Windows, Linux (Kali Linux, Ubuntu)
               </div>
               <div>
                 <strong className="text-[#0c1466]">Soft Skills:</strong> Analytical Thinking, Problem Solving, Continuous Learning
@@ -258,7 +283,7 @@ LANGUAGES:
           <div className="space-y-3">
             <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-[#0c1466] flex items-center gap-1.5">
               <FolderGit2 className="w-3.5 h-3.5 text-[#0c1466]" />
-              Featured Projects
+              Projects
             </h2>
             <div className="space-y-4">
               {projectsData.map((p) => (
@@ -282,6 +307,25 @@ LANGUAGES:
                   <div className="text-[11px] font-mono text-[#0c1466]/70 pt-0.5">
                     Stack: {p.technologies.join(', ')}
                   </div>
+                  {(p.liveUrl || p.adminUrl || p.githubUrl) && (
+                    <div className="flex flex-wrap gap-3 text-[11px] font-mono text-[#0c1466] pt-1">
+                      {p.liveUrl && (
+                        <a href={p.liveUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 underline font-semibold hover:opacity-80">
+                          <ExternalLink className="w-2.5 h-2.5" /> Live Demo
+                        </a>
+                      )}
+                      {p.adminUrl && (
+                        <a href={p.adminUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 underline font-semibold hover:opacity-80">
+                          <ExternalLink className="w-2.5 h-2.5" /> Admin Portal
+                        </a>
+                      )}
+                      {p.githubUrl && (
+                        <a href={p.githubUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 underline font-semibold hover:opacity-80">
+                          <Github className="w-2.5 h-2.5" /> GitHub
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

@@ -4,6 +4,7 @@ import {
   Phone, 
   Mail, 
   Github, 
+  Globe,
   Copy, 
   Check, 
   ArrowRight, 
@@ -142,6 +143,21 @@ export const Hero: React.FC<HeroProps> = ({
                 <span className="font-medium">github/{profileData.githubUsername}</span>
                 <ExternalLink className="w-3 h-3 text-[#0c1466]/70" />
               </a>
+
+              {/* Portfolio Link */}
+              {profileData.portfolioUrl && (
+                <a
+                  href={profileData.portfolioUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  id="hero-portfolio-link"
+                  className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white border border-[#0c1466]/20 hover:border-[#0c1466] transition-all text-xs font-mono text-[#0c1466] hover:bg-[#0c1466]/5 shadow-xs"
+                >
+                  <Globe className="w-3.5 h-3.5 text-[#0c1466] shrink-0" />
+                  <span className="font-medium">my-portfolio</span>
+                  <ExternalLink className="w-3 h-3 text-[#0c1466]/70" />
+                </a>
+              )}
 
             </div>
 

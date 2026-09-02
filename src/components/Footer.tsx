@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Github, Mail, MapPin } from 'lucide-react';
+import { ArrowUp, Github, Mail, MapPin, Globe } from 'lucide-react';
 import { profileData } from '../data/portfolioData';
 
 interface FooterProps {
@@ -71,6 +71,20 @@ export const Footer: React.FC<FooterProps> = ({ onOpenResume }) => {
               Karachi, Pakistan
             </span>
             <span>•</span>
+            {profileData.portfolioUrl && (
+              <>
+                <a 
+                  href={profileData.portfolioUrl} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="hover:text-[#0c1466] transition-colors flex items-center gap-1"
+                >
+                  <Globe className="w-3 h-3 text-[#0c1466]" />
+                  Portfolio
+                </a>
+                <span>•</span>
+              </>
+            )}
             <a 
               href={profileData.github} 
               target="_blank" 

@@ -4,6 +4,7 @@ import {
   Phone, 
   MapPin, 
   Github, 
+  Globe,
   Send, 
   Copy, 
   Check, 
@@ -186,6 +187,45 @@ export const ContactSection: React.FC = () => {
                 </a>
               </div>
             </div>
+
+            {/* Live Portfolio Card */}
+            {profileData.portfolioUrl && (
+              <div 
+                id="contact-portfolio-card"
+                className="p-5 rounded-2xl bg-white border border-[#0c1466]/20 hover:border-[#0c1466]/50 transition-all space-y-2 shadow-xs"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2.5 rounded-xl bg-[#0c1466]/10 text-[#0c1466]">
+                      <Globe className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="text-[11px] text-[#0c1466]/70 font-mono">Live Web Portfolio</div>
+                      <div className="text-sm font-bold text-[#0c1466]">my-portfolio-livid-nu-93.vercel.app</div>
+                    </div>
+                  </div>
+                  <a
+                    href={profileData.portfolioUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="p-2 rounded-lg text-[#0c1466]/60 hover:text-[#0c1466] hover:bg-[#0c1466]/10 transition-colors"
+                    title="Open live portfolio"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
+                <div className="pt-2 text-xs">
+                  <a 
+                    href={profileData.portfolioUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-[#0c1466] hover:underline font-semibold inline-flex items-center gap-1"
+                  >
+                    Visit Vercel Live Deployment <ArrowUpRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </div>
+            )}
 
             {/* Location & Timezone Card */}
             <div className="p-4 rounded-2xl bg-[#0c1466]/5 border border-[#0c1466]/15 flex items-center justify-between text-xs text-[#0c1466] font-mono">

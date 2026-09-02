@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   subtitle: string;
   tagline: string;
-  category: 'ml-ai' | 'web-ecommerce' | 'backend';
+  category: 'ml-ai' | 'web-ecommerce' | 'backend' | 'automation';
   period: string;
   type: 'Personal Project' | 'Client Project' | 'Internship';
   description: string;
@@ -71,6 +71,7 @@ export interface ProfileData {
   location: string;
   phone: string;
   email: string;
+  portfolioUrl?: string;
   github: string;
   githubUsername: string;
   bio: string;

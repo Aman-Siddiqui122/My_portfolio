@@ -7,7 +7,9 @@ import {
   ShieldCheck, 
   ShoppingCart, 
   Car,
-  GraduationCap
+  GraduationCap,
+  MessageSquare,
+  Mic
 } from 'lucide-react';
 import { projectsData } from '../data/portfolioData';
 import { CreditShieldDemo } from './CreditShieldDemo';
@@ -19,22 +21,32 @@ export const ProjectsSection: React.FC = () => {
   const categories = [
     { id: 'all', label: 'All Projects', count: projectsData.length },
     { id: 'ml-ai', label: 'AI & Data Science', count: projectsData.filter(p => p.category === 'ml-ai').length },
-    { id: 'web-ecommerce', label: 'Web & E-Commerce', count: projectsData.filter(p => p.category === 'web-ecommerce').length }
+    { id: 'web-ecommerce', label: 'Web & E-Commerce', count: projectsData.filter(p => p.category === 'web-ecommerce').length },
+    { id: 'automation', label: 'Automation & Cloud', count: projectsData.filter(p => p.category === 'automation' || p.category === 'backend').length }
   ];
 
   const filteredProjects = activeCategory === 'all' 
     ? projectsData 
-    : projectsData.filter(p => p.category === activeCategory);
+    : projectsData.filter(p => {
+        if (activeCategory === 'automation') {
+          return p.category === 'automation' || p.category === 'backend';
+        }
+        return p.category === activeCategory;
+      });
 
   const getProjectIcon = (id: string) => {
     switch (id) {
+      case 'whatsapp-forwarder':
+        return <MessageSquare className="w-5 h-5 text-[#0c1466]" />;
+      case 'meeting-mate':
+        return <Mic className="w-5 h-5 text-[#0c1466]" />;
       case 'credit-shield':
         return <ShieldCheck className="w-5 h-5 text-[#0c1466]" />;
       case 'pnp-meat-wholesale':
         return <ShoppingCart className="w-5 h-5 text-[#0c1466]" />;
       case 'ma-academy-uk':
         return <GraduationCap className="w-5 h-5 text-[#0c1466]" />;
-      case 'quality-cars-vinyl':
+      case 'quality-cars-parts':
         return <Car className="w-5 h-5 text-[#0c1466]" />;
       default:
         return <FolderGit2 className="w-5 h-5 text-[#0c1466]" />;
